@@ -10,7 +10,7 @@ package kadai_015;
 			}
 			
 			
-			public void gearChange(int afterGear) {
+			public void changeGear(int afterGear) {
 				int previousGear =this.gear;
 				this.gear =afterGear;
 				this.speed= switch(afterGear) {
@@ -21,7 +21,7 @@ package kadai_015;
 				case 5 ->  50;
 				default -> 10;
 				};
-				System.out.println("ギア"+ previousGear +"から" + afterGear +"に切り替えました。");
+				System.out.println("ギア"+ previousGear +"から" + afterGear +"に切り替えました");
 			};
 			
 			public void run() {

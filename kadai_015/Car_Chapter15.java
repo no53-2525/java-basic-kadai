@@ -9,24 +9,33 @@ package kadai_015;
 				this.speed =10;
 			}
 			
-			public void changeGear(int afterGear) {
-				if((gear >5)||(gear <=0)) {
-					System.out.println("ギアを調整してください");
-
-				}
-				System.out.println("ギア"+this.gear+"から"+ afterGear +"に切り替えました。");
-				 	this.speed = afterGear *10;
+			
+			public void gearChange(int afterGear) {
+				int previousGear =this.gear;
+				this.gear =afterGear;
+				this.speed= switch(this.gear) {
+				case 1 -> this.speed = 10;
+				case 2 -> this.speed = 20;
+				case 3 -> this.speed = 30;
+				case 4 -> this.speed = 40;
+				case 5 -> this.speed = 50;
+				default -> this.speed = 10;
+				
+				};
+				System.out.println("ギア"+ previousGear +"から" + afterGear +"に変更されました。");
 			}
 			
-			public void displaySpeed() {
+	
+			
+			public void run() {
 
-				System.out.println("時速は" + this.speed + "kmです");
+				System.out.println("速度は時速" + this.speed + "kmです");
 			
 				}
 			public static void main(String[] args) {
 				Car_Chapter15 car = new Car_Chapter15();
-				car.changeGear(0);
-				car.displaySpeed();
+				car.gearChange(3);
+				car.run();
 			}
 
 

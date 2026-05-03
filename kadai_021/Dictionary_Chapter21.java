@@ -12,7 +12,7 @@ public class Dictionary_Chapter21 {
 		fruit.put("lemon", "レモン");
 		fruit.put("pear", "梨");
 		fruit.put("kiwi", "キウイ");
-		fruit.put("straｗberry", "いちご");
+		fruit.put("strawberry", "いちご");
 		fruit.put("grape", "ぶどう");
 		fruit.put("muscat", "マスカット");
 		fruit.put("cherry", "さくらんぼ");
@@ -25,7 +25,7 @@ public class Dictionary_Chapter21 {
 			if(fruit.containsKey(word)) {
 				System.out.println(word+"の意味は"+fruit.get(word));
 			}else {
-				System.out.println(word+"は辞書に存在しません。");
+				System.out.println(word+"は辞書に存在しません");
 			}
 		}
 		

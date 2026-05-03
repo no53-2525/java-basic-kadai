@@ -12,7 +12,7 @@ public class Dictionary_Chapter21 {
 		fruit.put("lemon", "レモン");
 		fruit.put("pear", "梨");
 		fruit.put("kiwi", "キウイ");
-		fruit.put("straeberry", "いちご");
+		fruit.put("straberry", "いちご");
 		fruit.put("grape", "ぶどう");
 		fruit.put("muscat", "マスカット");
 		fruit.put("cherry", "さくらんぼ");
@@ -23,9 +23,9 @@ public class Dictionary_Chapter21 {
 		for(int i =0; i <searchWords.length; i++) {
 			String word = searchWords[i];
 			if(fruit.containsKey(word)) {
-				System.out.println(word+"の意味は"+fruit.get(word)+"です。");
+				System.out.println(word+"の意味は"+fruit.get(word));
 			}else {
-				System.out.println(word+"辞書に登録されていません。");
+				System.out.println(word+"は辞書に登録されていません。");
 			}
 		}
 		

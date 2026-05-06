@@ -39,7 +39,7 @@ public class Jyanken_Chapter28 {
 		String[] opponentChoices = { "r", "s", "p" };
 		// 2. 乱数を使って 0, 1, 2 のいずれかの数値を生成する
 		// (int)(Math.random() * 3) は、0以上3未満の整数（0, 1, 2）を返します
-		int randomNum = (int) (Math.random() * 3);
+		int randomNum = (int) Math.floor(Math.random() * 3);
 		String choice = opponentChoices[randomNum];
 		System.out.println(choice);
 		return choice;
@@ -57,18 +57,17 @@ public class Jyanken_Chapter28 {
 		hands.put("s", "チョキ");
 		hands.put("p", "パー");
 
-		System.out.println("自分の手は" + hands.get(me) + "相手の手は" + hands.get(you));
-	
+		System.out.println("自分の手は" + hands.get(me) + ",対戦相手の手は" + hands.get(you));
 
-	// 勝敗の判定を追加
-			if (me.equals(you)) {
-				System.out.println("あいこです");
-			} else if ((me.equals("r") && you.equals("s")) || 
-			           (me.equals("s") && you.equals("p")) || 
-			           (me.equals("p") && you.equals("r"))) {
-				System.out.println("自分の勝ちです");
-			} else {
-				System.out.println("自分の負けです");
-			}
-}
+		// 勝敗の判定を追加
+		if (me.equals(you)) {
+			System.out.println("あいこです");
+		} else if ((me.equals("r") && you.equals("s")) ||
+				(me.equals("s") && you.equals("p")) ||
+				(me.equals("p") && you.equals("r"))) {
+			System.out.println("自分の勝ちです");
+		} else {
+			System.out.println("自分の負けです");
+		}
+	}
 }
